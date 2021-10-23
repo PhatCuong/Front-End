@@ -61,96 +61,7 @@ const Home = () => {
     return (
         <div className="home">
             <Container className="home__container">
-                <Form
-                    onSubmit={() => {
-                        db.collection("vaccine_passport")
-                            .doc(new Date().getTime().toString())
-                            .set({
-                                name: newData.name,
-                                dob: new Date(newData.dob),
-                                doses: newData.doses,
-                                location: newData.location,
-                                phoneNumber: newData.phoneNumber,
-                                address: newData.address,
-                            })
-                            .then(function () {
-                                console.log("Document successfully written!");
-                                fetchData();
-                            })
-                            .catch(function (error) {
-                                console.error(
-                                    "Error writing document: ",
-                                    error
-                                );
-                            });
-                    }}
->
-                    <Form.Field>
-                        <label>Full Name</label>
-                        <input
-                            placeholder="Full name"
-                            value={newData.name}
-                            onChange={(e) => {
-                                setNewData((pre) => {
-                                    return { ...pre, name: e.target.value };
-                                });
-                            }}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <label>Date of birth</label>
-                        <input
-                            type="date"
-                            value={newData.dob}
-                            onChange={(e) => {
-                                setNewData((pre) => {
-                                    return { ...pre, dob: e.target.value };
-                                });
-                            }}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <label>Phone Number</label>
-                        <input
-                            placeholder="0947777397"
-                            value={newData.phoneNumber}
-                            onChange={(e) => {
-                                setNewData((pre) => {
-                                    return { ...pre, name: e.target.value };
-                                });
-                            }}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <label>Address</label>
-                        <input
-                            placeholder="Ho Chi Minh city"
-                            value={newData.name}
-                            onChange={(e) => {
-                                setNewData((pre) => {
-                                    return { ...pre, name: e.target.value };
-                                });
-                            }}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <label>Doses</label>
-                        <input
-                            placeholder="0/1/2"
-                            type = "number"
-                            min = "0"
-                            max = "2"
-                            onKeyDown={(e) => {
-                                e.preventDefault();
-                              }}
-                            value={newData.doses}
-                            onChange={(e) => {
-                                setNewData((pre) => {
-                                    return { ...pre, doses: e.target.value };
-                                });
-                            }}
-                        />
-                    </Form.Field>
+                <Form>
                     <Form.Field>
                         <label>Location</label>
                         <input
@@ -169,12 +80,6 @@ const Home = () => {
                     <Button type="submit">Submit</Button>
                 </Form>
             </Container>
-
-
-
-
-
-
             
             <div className="home__data">
                 {userData.map((user, index) => (
