@@ -1,0 +1,22 @@
+.home {
+    &__container {
+        // border: 1px solid red;
+    }
+    &__data {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &__card:not(:first-child) {
+            // margin-left: 30px;
+        }
+        .ui.card {
+            margin-top: 0px;
+            margin-bottom: 50px;
+            margin-left: 30px;
+        }
+    }
+}
