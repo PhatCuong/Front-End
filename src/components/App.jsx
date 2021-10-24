@@ -9,19 +9,19 @@ import Topbar from "./pages/topbar/Topbar";
 const App = () => {
     return (
         <div>
-            <Topbar/>
-            <Header/>
+            <Topbar />
+            <Header />
             <Switch>
-                {routes.map((route) => (
+                {routes.map((route, i) => (
                     <Route
-                        key={routes.name}
+                        key={i}
                         exact
                         path={route.path}
                         component={route.component}
                     />
                 ))}
             </Switch>
-            <Footer/>
+            <Footer />
         </div>
     );
 };

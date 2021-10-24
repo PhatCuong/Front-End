@@ -56,12 +56,10 @@ const Home = () => {
             .doc(inputId)
             .get()
             .then((snapshot) => {
-                console.log(snapshot.exists);
                 if (snapshot.exists) {
                     const document = snapshot.data();
                     setUserData(document);
                 } else {
-                    console.log("notFound");
                     setUserData(null);
                 }
             });
@@ -173,37 +171,37 @@ const Home = () => {
 
                     <Grid>
                         <Grid.Row>
-                            <Grid.Column width={3}>
+                            <Grid.Column width={5}>
                                 <h3>Full name</h3>
                             </Grid.Column>
-                            <Grid.Column width={13}>
+                            <Grid.Column width={3}>
                                 <p>{userData.name}</p>
                             </Grid.Column>
                         </Grid.Row>
 
                         <Grid.Row>
-                            <Grid.Column width={3}>
+                            <Grid.Column width={5}>
                                 <h3>Date of Birth</h3>
                             </Grid.Column>
-                            <Grid.Column width={13}>
+                            <Grid.Column width={3}>
                                 <p>{getFormattedDate(userData.dob)}</p>
                             </Grid.Column>
                         </Grid.Row>
 
                         <Grid.Row>
-                            <Grid.Column width={3}>
+                            <Grid.Column width={5}>
                                 <h3>Address</h3>
                             </Grid.Column>
-                            <Grid.Column width={13}>
+                            <Grid.Column width={3}>
                                 <p>{userData.address}</p>
                             </Grid.Column>
                         </Grid.Row>
 
                         <Grid.Row>
-                            <Grid.Column width={3}>
+                            <Grid.Column width={5}>
                                 <h3>Phone Number</h3>
                             </Grid.Column>
-                            <Grid.Column width={13}>
+                            <Grid.Column width={3}>
                                 <p>{userData.phone}</p>
                             </Grid.Column>
                         </Grid.Row>
