@@ -9,7 +9,42 @@ const Footer = () => {
           <div>
             <h1 className="footer__title">Vaccine Passport</h1>
             <span className="footer__subtitle">
-              Project from Vietnamese - German University
+              A project from Vietnamese - German University
+            </span>
+          </div>
+          <div>
+            <i
+              className="footer__icon"
+              class="location arrow icon "
+              style={{ color: "white", marginLeft: "15%", marginTop: "10px" }}
+              i
+            />
+            <span className="footer__subtitle" style={{ marginLeft: "10px" }}>
+              Le Lai, Hoa Phu ward, Thu Dau Mot city, Binh Duong province.
+            </span>
+          </div>
+
+          <div>
+            <i
+              className="footer__icon"
+              class="envelope outline icon"
+              style={{ color: "white", marginLeft: "15%", marginTop: "10px" }}
+              i
+            />
+            <span className="footer__subtitle" style={{ marginLeft: "10px" }}>
+              14155@student.vgu.edu.vn
+            </span>
+          </div>
+
+          <div>
+            <i
+              className="footer__icon"
+              class="phone icon"
+              style={{ color: "white", marginLeft: "15%", marginTop: "10px" }}
+              i
+            />
+            <span className="footer__subtitle" style={{ marginLeft: "10px" }}>
+              +84 947 777 397
             </span>
           </div>
         </div>

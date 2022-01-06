@@ -1,22 +1,6 @@
-.container {
-  max-width: 768px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
 .footer {
   padding-top: 2rem;
 }
-
-.footer__container {
-  row-gap: 3.5rem;
-}
-
 .footer__bg {
   background-color: coral;
   padding: 3rem 0 3rem;
@@ -25,17 +9,17 @@
 .footer__title {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  margin-left: 20%;
+  margin-left: 15%;
 }
 
 .footer__subtitle {
   font-size: 1rem;
-  margin-left: 20%;
+  margin-left: 15%;
   margin-bottom: 0.5rem;
 }
 
 .footer__copy {
-  font-size: 0.75rem;
+  font-size: 1rem;
   text-align: center;
   margin-top: 3rem;
 }
@@ -43,4 +27,8 @@
 .footer__title,
 .footer__subtitle {
   color: white;
+}
+.footer__icon {
+  margin-left: 15%;
+  margin-top: 10px;
 }
